@@ -2,7 +2,7 @@
 
 /**
  * print_reverse - Prints reverse string.
- * @types: Lista of arguments
+ * @args_list: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags: Calculates active flags
  * @width: get width
@@ -10,7 +10,7 @@
  * @size: Size specifier
  * Return: Numbers of chars printed
  */
-int print_reverse(va_list types, char buffer[],
+int print_reverse(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char *str;
@@ -21,7 +21,7 @@ int print_reverse(va_list types, char buffer[],
 	UNUSED(width);
 	UNUSED(size);
 
-	str = va_arg(types, char *);
+	str = va_arg(args_list, char *);
 
 	if (str == NULL)
 	{
@@ -44,7 +44,7 @@ int print_reverse(va_list types, char buffer[],
 
 /**
  * print_rot13string - Print a string in rot13.
- * @types: Lista of arguments
+ * @args_list: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags: Calculates active flags
  * @width: get width
@@ -52,7 +52,7 @@ int print_reverse(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Numbers of chars printed
  */
-int print_rot13string(va_list types, char buffer[],
+int print_rot13string(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char c;

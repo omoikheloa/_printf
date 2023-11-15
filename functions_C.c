@@ -2,7 +2,7 @@
 
 /**
  * print_pointer - Prints the value of a pointer variable
- * @types: List a of arguments
+ * @args_list: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -10,14 +10,14 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
-int print_pointer(va_list types, char buffer[],
+int print_pointer(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char ex_char = 0, pd_char = ' ';
 	int idnx = BUFF_SIZE - 2, len = 2, pd_strt = 1; /* length=2, for '0x' */
 	unsigned long num_addrs;
 	char map_to[] = "0123456789abcdef";
-	void *addrs = va_arg(types, void *);
+	void *addrs = va_arg(args_list, void *);
 
 	UNUSED(width);
 	UNUSED(size);
@@ -51,7 +51,7 @@ int print_pointer(va_list types, char buffer[],
 /**
  * print_non_printable - Prints ASCII codes in
  * hexadecimal of non-printable chars
- * @types: List of arguments
+ * @args_list: List of arguments
  * @buffer: Buffer array to handle print
  * @flags: Calculates active flags
  * @width: get width
@@ -59,11 +59,11 @@ int print_pointer(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
-int print_non_printable(va_list types, char buffer[],
+int print_non_printable(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
-	char *str = va_arg(types, char *);
+	char *str = va_arg(args_list, char *);
 
 	UNUSED(flags);
 	UNUSED(width);

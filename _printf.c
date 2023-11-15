@@ -1,48 +1,48 @@
 #include "main.h"
 
 /**
- * _printf - Printf function
- * @format: format
- *
- * Return: length of printed character
+ * _printf - produces output according to a format
+ * @format: format string containing the characters and the specifiers
+ * Description: this function will call the get_print() function that will
+ * determine which printing function to call depending on the conversion
+ * specifiers contained into fmt
+ * Return: length of the formatted output string
+ * Authors: Ehoneah Obed & Abdulhakeem Badejo
  */
-
 int _printf(const char *format, ...)
 {
-	int i, printed = 0, p_chara = 0;
-	int buffer_index = 0;
-	va_list args_list;
-	char buffer[BUFFER_SIZE];
+	int (*pfunc)(va_list, flags_t *);
+	const char *p;
+	va_list arguments;
+	flags_t flags = {0, 0, 0};
 
-	if (format == NULL)
+	register int count = 0;
+
+	va_start(arguments, format);
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	va_start(args_list, format);
-
-	for (i = 0; format && format[i] != '\0'; i++)
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+	for (p = format; *p; p++)
 	{
-		if (format[i] != '%')
+		if (*p == '%')
 		{
-			buffer[buffer_index++] = format[i];
-			if (buffer_index == BUFFER_SIZE)
-				print_buffer(buffer, &buffer_index);
-			p_chara++;
-		}
-		else
-		{
-			print_buffer(buffer, &buffer_index);
-			++i;
-			if (print_func(format, &i, args_list, buffer) == -1)
+			p++;
+			if (*p == '%')
 			{
-				va_end(args_list);
-				return (-1);
+				count += _putchar('%');
+				continue;
 			}
-			p_chara += buffer_index;
-		}
+			while (get_flag(*p, &flags))
+				p++;
+			pfunc = get_print(*p);
+			count += (pfunc)
+				? pfunc(arguments, &flags)
+				: _printf("%%%c", *p);
+		} else
+			count += _putchar(*p);
 	}
-
-	print_buffer(buffer, &buffer_index);
-
-	va_end(args_list);
-
-	return (p_chara);
+	_putchar(-1);
+	va_end(arguments);
+	return (count);
 }
