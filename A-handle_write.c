@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * handle_write_char - Prints a string
+ * handle_write_char - Prints a string.
  * @c: char types.
- * @buffer: Buffer array to handle print
+ * @buffer: Buffer array to handle print.
  * @flags:  Calculates active flags.
  * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
+ * @precision: precision specifier.
+ * @size: Size specifier.
  *
- * Return: Number of chars printed.
+ * Return: Number of characters printed.
  */
+
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
 { /* char is stored at left and paddind at buffer's right */
@@ -43,17 +44,18 @@ int handle_write_char(char c, char buffer[],
 }
 
 /**
- * write_number - Prints a string
- * @is_negative: Lista of arguments
+ * write_number - Prints a string.
+ * @is_negative: List of arguments.
  * @ind: char types.
- * @buffer: Buffer array to handle print
+ * @buffer: Buffer array to handle print.
  * @flags:  Calculates active flags
  * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
+ * @precision: precision specifier.
+ * @size: Size specifier.
  *
- * Return: Number of chars printed.
+ * Return: Number of characters printed.
  */
+
 int write_number(int is_negative, int ind, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -76,15 +78,15 @@ int write_number(int is_negative, int ind, char buffer[],
 }
 
 /**
- * write_num - Write a number using a bufffer
- * @ind: Index at which the number starts on the buffer
- * @buffer: Buffer
- * @flags: Flags
- * @width: width
- * @prec: Precision specifier
- * @length: Number length
- * @padd: Pading char
- * @extra_c: Extra char
+ * write_num - Write a number using a buffer.
+ * @ind: Index at which the number starts on the buffer.
+ * @buffer: Buffer.
+ * @flags: Flags.
+ * @width: Get width.
+ * @prec: Precision specifier.
+ * @length: Number length.
+ * @padd: Pading characters.
+ * @extra_c: Extra characters.
  *
  * Return: Number of printed chars.
  */
