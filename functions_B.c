@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_unsigned - Prints an unsigned number
- * @args_list: List of arguments
- * @buffer: Buffer array to handle print
- * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH)
- * @width: Minimum width for printing (padding with spaces)
- * @precision: Number of digits after the decimal point (not used for integers)
- * @size: Size specifier for the argument (e.g., h, l, L)
+ * print_unsigned - Prints an unsigned number.
+ * @args_list: List of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
+ * @width: Minimum width for printing (padding with spaces).
+ * @precision: Number of digits after the decimal point (not used for integers).
+ * @size: Size specifier for the argument (e.g., h, l, L).
  * Return: Number of characters printed.
  */
 int print_unsigned(va_list args_list, char buffer[],
@@ -34,14 +34,14 @@ int print_unsigned(va_list args_list, char buffer[],
 }
 
 /**
- * print_octal - Prints an unsigned number in octal notation
- * @args_list: List of arguments
- * @buffer: Buffer array to handle print
- * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH)
- * @width: Minimum width for printing (padding with spaces)
- * @precision: Number of digits after the decimal point (not used for integers)
- * @size: Size specifier for the argument (e.g., h, l, L)
- * Return: Number of characters printed
+ * print_octal - Prints an unsigned number in octal notation.
+ * @args_list: List of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
+ * @width: Minimum width for printing (padding with spaces).
+ * @precision: Number of digits after the decimal point (not used for integers).
+ * @size: Size specifier for the argument (e.g., h, l, L).
+ * Return: Number of characters printed.
  */
 int print_octal(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
@@ -72,14 +72,14 @@ int print_octal(va_list args_list, char buffer[],
 }
 
 /**
- * print_hexadecimal - Prints an unsigned number in hexadecimal notation
- * @args_list: List of arguments
- * @buffer: Buffer array to handle print
- * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH)
- * @width: Minimum width for printing (padding with spaces)
- * @precision: Number of digits after the decimal point (not used for integers)
- * @size: Size specifier for the argument (e.g., h, l, L)
- * Return: Number of characters printed
+ * print_hexadecimal - Prints an unsigned number in hexadecimal notation.
+ * @args_list: List of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
+ * @width: Minimum width for printing (padding with spaces).
+ * @precision: Number of digits after the decimal point (not used for integers).
+ * @size: Size specifier for the argument (e.g., h, l, L).
+ * Return: Number of characters printed.
  */
 int print_hexadecimal(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
@@ -89,14 +89,14 @@ int print_hexadecimal(va_list args_list, char buffer[],
 }
 
 /**
- * print_hexa_upper - Prints an unsigned number in upper hexadecimal notation
- * @args_list: List of arguments
- * @buffer: Buffer array to handle print
- * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH)
- * @width: Minimum width for printing (padding with spaces)
- * @precision: Number of digits after the decimal point (not used for integers)
- * @size: Size specifier for the argument (e.g., h, l, L)
- * Return: Number of characters printed
+ * print_hexa_upper - Prints an unsigned number in upper hexadecimal notation.
+ * @args_list: List of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
+ * @width: Minimum width for printing (padding with spaces).
+ * @precision: Number of digits after the decimal point (not used for integers).
+ * @size: Size specifier for the argument (e.g., h, l, L).
+ * Return: Number of characters printed.
  */
 int print_hexa_upper(va_list args_list, char buffer[],
 	int flags, int width, int precision, int size)
