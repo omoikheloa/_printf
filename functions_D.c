@@ -62,7 +62,7 @@ int print_rot13string(va_list args_list, char buffer[],
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	str = va_arg(types, char *);
+	str = va_arg(args_list, char *);
 	UNUSED(buffer);
 	UNUSED(flags);
 	UNUSED(width);
