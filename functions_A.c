@@ -129,38 +129,47 @@ int precision, int size)
 }
 
 /**
- * print_binary - prints binary
- * @args_list: argument list
- *
- * Return: number of printed characters
+ * print_binary - to print unsigned integers.
+ * @args_list: arguments.
+ * @buffer: buffer for handling of prints.
+ * @flags: get the amount of flags.
+ * @width: for width.
+ * @precision: to get precision.
+ * @size: to calculate size.
+ * Return: Number of printed characters.
  */
 
-int print_binary(va_list args_list)
+int print_binary(va_list args_list, char buffer[], int flags, int width,
+int precision, int size)
 {
-	unsigned int num = va_arg(args_list, unsigned int);
-	unsigned int mask = UINT_MAX;
-	int binary[32];
-	int count = 0;
+	unsigned int n, m, i, sum;
+	unsigned int a[32];
+	int count;
 
-	for (int i = 0; i < 32; i++)
+	UNUSED(buffer);
+	UNUSED(flags);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
+
+	n = va_arg(args_list, unsigned int);
+	m = 2147483648; /* (2 ^ 31) */
+	a[0] = n / m;
+	for (i = 1; i < 32; i++)
 	{
-		binary[i] = (num >> (31 - i)) & 1;
+		m /= 2;
+		a[i] = (n / m) % 2;
 	}
-
-	int started = 0;
-
-	for (i = 0; i < 32; i++)
+	for (i = 0, sum = 0, count = 0; i < 32; i++)
 	{
-		if (binary[i] || started || i == 31)
+		sum += a[i];
+		if (sum || i == 31)
 		{
-			char digit = '0' + binary[i];
+			char z = '0' + a[i];
 
-			write(1, &digit, 1);
-
-			started = 1;
+			write(1, &z, 1);
 			count++;
 		}
 	}
-	write(1, "\n", 1);
 	return (count);
 }
