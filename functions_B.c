@@ -6,7 +6,8 @@
  * @buffer: Buffer array to handle print.
  * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
  * @width: Minimum width for printing (padding with spaces).
- * @precision: Number of digits after the decimal point (not used for integers).
+ * @precision: Number of digits after the decimal point
+ * (not used for integers).
  * @size: Size specifier for the argument (e.g., h, l, L).
  * Return: Number of characters printed.
  */
@@ -39,7 +40,8 @@ int print_unsigned(va_list args_list, char buffer[],
  * @buffer: Buffer array to handle print.
  * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
  * @width: Minimum width for printing (padding with spaces).
- * @precision: Number of digits after the decimal point (not used for integers).
+ * @precision: Number of digits after the decimal point
+ * (not used for integers).
  * @size: Size specifier for the argument (e.g., h, l, L).
  * Return: Number of characters printed.
  */
@@ -77,7 +79,8 @@ int print_octal(va_list args_list, char buffer[],
  * @buffer: Buffer array to handle print.
  * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
  * @width: Minimum width for printing (padding with spaces).
- * @precision: Number of digits after the decimal point (not used for integers).
+ * @precision: Number of digits after the decimal point
+ * (not used for integers).
  * @size: Size specifier for the argument (e.g., h, l, L).
  * Return: Number of characters printed.
  */
@@ -94,7 +97,8 @@ int print_hexadecimal(va_list args_list, char buffer[],
  * @buffer: Buffer array to handle print.
  * @flags: Active flags for formatting (e.g., F_PLUS, F_HASH).
  * @width: Minimum width for printing (padding with spaces).
- * @precision: Number of digits after the decimal point (not used for integers).
+ * @precision: Number of digits after the decimal point
+ * (not used for integers).
  * @size: Size specifier for the argument (e.g., h, l, L).
  * Return: Number of characters printed.
  */

@@ -19,7 +19,7 @@ int print_char(va_list args_list, char buffer[], int flags, int width,
 
 /**
  * print_string - to print string.
- * @args-list: arguments.
+ * @args_list: arguments.
  * @buffer: buffer for handling of prints.
  * @flags: get the amount of flags.
  * @width: for width.
