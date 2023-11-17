@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_char - to print character
- * @args_list: arguments
- * @buffer: buffer for handling of prints
- * @flags: get the amount of flags
- * @width: for width
- * @precision: to get precision
- * @size: to calculate size
- * Return: Number of printed characters
+ * print_char - to print character.
+ * @args_list: arguments.
+ * @buffer: buffer for handling of prints.
+ * @flags: get the amount of flags.
+ * @width: for width.
+ * @precision: to get precision.
+ * @size: to calculate size.
+ * Return: Number of printed characters.
  */
 int print_char(va_list args_list, char buffer[], int flags, int width,
 		int precision, int size)
@@ -18,14 +18,14 @@ int print_char(va_list args_list, char buffer[], int flags, int width,
 }
 
 /**
- * print_string - to print string
- * @args-list: arguments
- * @buffer: buffer for handling of prints
- * @flags: get the amount of flags
- * @width: for width
- * @precision: to get precision
- * @size: to calculate size
- * Return: Number of printed characters
+ * print_string - to print string.
+ * @args-list: arguments.
+ * @buffer: buffer for handling of prints.
+ * @flags: get the amount of flags.
+ * @width: for width.
+ * @precision: to get precision.
+ * @size: to calculate size.
+ * Return: Number of printed characters.
  */
 int print_string(va_list args_list, char buffer[], int flags, int width,
 int precision, int size)
@@ -69,14 +69,14 @@ int precision, int size)
 }
 
 /**
- * print_percent - to print percent sign
+ * print_percent - to print percent sign.
  * @args_list: arguments list.
- * @buffer: buffer for handling of prints
- * @flags: get the amount of flags
- * @width: for width
- * @precision: to get precision
- * @size: to calculate size
- * Return: Number of printed characters
+ * @buffer: buffer for handling of prints.
+ * @flags: get the amount of flags.
+ * @width: for width.
+ * @precision: to get precision.
+ * @size: to calculate size.
+ * Return: Number of printed characters.
  */
 int print_percent(va_list args_list, char buffer[], int flags, int width,
 int precision, int size)
@@ -91,14 +91,14 @@ int precision, int size)
 }
 
 /**
- * print_int - to print integers
- * @args_list: arguments list
- * @buffer: buffer for handling of prints
- * @flags: get the amount of flags
- * @width: for width
- * @precision: to get precision
- * @size: to calculate size
- * Return: Number of printed characters
+ * print_int - to print integers.
+ * @args_list: arguments list.
+ * @buffer: buffer for handling of prints.
+ * @flags: get the amount of flags.
+ * @width: for width.
+ * @precision: to get precision.
+ * @size: to calculate size.
+ * Return: Number of printed characters.
  */
 int print_int(va_list args_list, char buffer[], int flags, int width,
 int precision, int size)
@@ -129,14 +129,14 @@ int precision, int size)
 }
 
 /**
- * print_binary - to print unsigned integers
- * @args_list: arguments
- * @buffer: buffer for handling of prints
- * @flags: get the amount of flags
- * @width: for width
- * @precision: to get precision
- * @size: to calculate size
- * Return: Number of printed characters
+ * print_binary - to print unsigned integers.
+ * @args_list: arguments.
+ * @buffer: buffer for handling of prints.
+ * @flags: get the amount of flags.
+ * @width: for width.
+ * @precision: to get precision.
+ * @size: to calculate size.
+ * Return: Number of printed characters.
  */
 int print_binary(va_list args_list, char buffer[], int flags, int width,
 int precision, int size)
