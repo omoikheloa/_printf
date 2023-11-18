@@ -57,7 +57,7 @@ int print_octal(va_list args_list, char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
-	@@ -66,11 +59,11 @@ int print_octal(va_list args_list, char buffer[],
+	{
 		buffer[i--] = (num % 8) + '0';
 		num /= 8;
 	}
