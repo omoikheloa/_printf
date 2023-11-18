@@ -24,6 +24,12 @@ int print_unsigned(va_list args_list, char buffer[],
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
+	/* A quick fix to deal with casted unsigned ints*/
+	if ((int)num < 0)
+	{
+		num = 4294967296 + (int)num; /*converting + to -*/
+	}
+
 	while (num > 0)
 	{
 		buffer[i--] = (num % 10) + '0';
